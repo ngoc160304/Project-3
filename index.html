@@ -28,13 +28,6 @@
   <div id="products">
     
   </div>
-  <form action="">
-    <input type="text" placeholder="Nhập tên">
-    <input type="text" placeholder="Nhập số lượng">
-    <button id="add">
-      Add
-    </button>
-  </form>
   <div class="paging">
     <div class="button-paging" id="prev">Prev</div>
     <div class="paging-number" id="number-page">1</div>
@@ -42,28 +35,5 @@
   </div>
   <script type="module" src="./js/category.js"></script>
   <script type="module" src="./js/product.js"></script>
-  <script>
-    const buttonAdd = document.querySelector("#add");
-    buttonAdd.addEventListener("click", (e) => {
-      e.preventDefault();
-      const name = e.target.form[0].value;
-      const quantity = e.target.form[1].value;
-      const option = {
-        name : name,
-        quantity : quantity
-      }
-      async function postData(url = "", data = {}) {
-        const response = await fetch(url, {
-        method: "POST", // *GET, POST, PUT, DELETE, etc.
-        headers: {
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify(data), // body data type must match "Content-Type" header
-      });
-      return response.json(); // parses JSON response into native JavaScript objects
-      }
-      postData("https://json-project-one.vercel.app/products", option)
-    })
-  </script>
+  
 </html>
