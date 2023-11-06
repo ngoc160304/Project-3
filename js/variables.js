@@ -1,5 +1,5 @@
-export const CATEGORYURL = "https://json-project-one.vercel.app/category";
-export const PRODUCTURL = "https://json-project-one.vercel.app/products";
+export const CATEGORYURL = "https://data-project-3.vercel.app/category";
+export const PRODUCTURL = "https://data-project-3.vercel.app/products";
 export const categorys = document.querySelector("#categorys");
 export const inputSearch = document.querySelector("#content-search");
 export const buttonSearch = document.querySelector("#search");
